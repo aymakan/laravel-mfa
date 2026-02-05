@@ -31,7 +31,6 @@ class EnsureMfaVerified
         if (!$this->mfaManager->isEnabled()) {
             return $next($request);
         }
-
         $user = $request->user();
 
         // If no authenticated user, pass through (auth middleware should handle this)
@@ -54,15 +53,7 @@ class EnsureMfaVerified
             return $next($request);
         }
 
-        // Optional MFA: only block if user has MFA enabled but not verified
-        if (!$hasMfaEnabled) {
-            return $next($request);
-        }
-        if ($isVerified) {
-            return $next($request);
-        }
-
-        return $this->mfaRequiredResponse();
+        return $next($request);
     }
 
     /**
