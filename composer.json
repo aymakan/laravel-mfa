@@ -1,6 +1,8 @@
 {
     "name": "aymakan/laravel-mfa",
     "description": "API-only Multi-Factor Authentication enforcement for Laravel (TOTP, middleware-driven)",
+    "keywords": ["laravel", "mfa", "totp", "middleware", "authentication"],
+    "homepage": "https://github.com/aymakan/laravel-mfa",
     "license": "MIT",
     "type": "library",
     "require": {
